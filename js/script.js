@@ -5,6 +5,23 @@
         else navbar.classList.remove('scrolled');
     });
 
+// Бургер-меню
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Закрыть меню при клике на ссылку
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
 // Countdown
 function updateCountdown(){
     const eventDate = new Date('December 26, 2026 09:00:00').getTime();
