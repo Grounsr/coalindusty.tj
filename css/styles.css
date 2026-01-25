@@ -495,12 +495,28 @@
     .nav-btn{
         display:none;
     }
+.burger{
+    display:none;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    margin-left:1rem;
+    font-size:1.5rem;
+    color:var(--light);
+    transition:color .3s;
+}
+.burger:hover{
+    color:var(--gold);
+}
+.burger.active i::before{
+    content:"\f00d"; /* иконка X */
+}
+
+@media(max-width:768px){
     .burger{
-        display:flex;
+        display:block;
     }
-    .hero h1{font-size:2.4rem;}
-    .form-grid{grid-template-columns:1fr;}
-    .form-group.full-width{grid-column:span 1;}
-    .pricing-card.featured{transform:none;}
+    /* ...остальные стили... */
 }
 
