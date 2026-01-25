@@ -346,7 +346,16 @@
             display:block;margin-bottom:.4rem;font-weight:500;font-size:.92rem;
         }
         .form-group input,
-        .form-group select,
+             .form-group select{
+                background:rgba(255,255,255,.05);
+                cursor:pointer;
+            }
+            
+            .form-group select option{
+                background:var(--dark);    /* #0f0f1a */
+                color:var(--light);        /* #edf2f4 */
+                padding:10px;
+            }
         .form-group textarea{
             width:100%;padding:.85rem;border-radius:10px;
             border:1px solid rgba(255,255,255,.2);
@@ -355,7 +364,16 @@
             transition:all .3s;
         }
         .form-group input:focus,
-        .form-group select:focus,
+       .form-group select{
+    background:rgba(255,255,255,.05);
+    cursor:pointer;
+}
+
+.form-group select option{
+    background:var(--dark);    /* #0f0f1a */
+    color:var(--light);        /* #edf2f4 */
+    padding:10px;
+}
         .form-group textarea:focus{
             outline:none;border-color:var(--gold);
             background:rgba(255,255,255,.1);
