@@ -91,7 +91,7 @@ updateCountdown();
 
     const translations = {
         en: {
-            meta_title: "International Coal Forum Tajikistan 2026",
+            meta_title: "International Coal Forum - Tajikistan 2026",
 
             nav_about:"About",
             nav_topics:"Topics",
@@ -102,7 +102,7 @@ updateCountdown();
             nav_register:"Register Now",
 
             hero_badge:"Central Asia's Premier Mining Event",
-            hero_title:"International Coal Forum Tajikistan 2026",
+            hero_title:"International Coal Forum - Tajikistan 2026",
             hero_subtitle:"\"Shaping the Future of Central Asian Coal: Growth, Innovation & Sustainable Development\"",
             hero_date:"December 26, 2026",
             hero_place:"Dushanbe, Tajikistan",
@@ -272,7 +272,7 @@ updateCountdown();
             footer_copy:"© 2026 International Coal Forum Tajikistan. All rights reserved."
         },
         ru: {
-            meta_title:"Международный угольный форум Таджикистан 2026",
+            meta_title:"Международный угольный форум - Таджикистан 2026",
 
             nav_about:"О форуме",
             nav_topics:"Темы",
@@ -283,7 +283,7 @@ updateCountdown();
             nav_register:"Регистрация",
 
             hero_badge:"Главное угольное событие Центральной Азии",
-            hero_title:"Международный угольный форум Таджикистан 2026",
+            hero_title:"Международный угольный форум - Таджикистан 2026",
             hero_subtitle:"\"Формируя будущее угольной отрасли Центральной Азии: рост, инновации и устойчивое развитие\"",
             hero_date:"26 Декабря 2026",
             hero_place:"Душанбе, Таджикистан",
@@ -453,7 +453,7 @@ updateCountdown();
             footer_copy:"© 2026 Международный угольный форум Таджикистан. Все права защищены."
         },
         tj: {
-            meta_title:"Форуми байналмилалии ангишт Тоҷикистон 2026",
+            meta_title:"Форуми байналмилалии ангишт - Тоҷикистон 2026",
 
             nav_about:"Дар бораи форум",
             nav_topics:"Мавзӯъҳо",
@@ -464,7 +464,7 @@ updateCountdown();
             nav_register:"Бақайдгирӣ",
 
             hero_badge:"Рӯйдоди асосии ангишт дар Осиёи Марказӣ",
-            hero_title:"Форуми байналмилалии ангишт Тоҷикистон 2026",
+            hero_title:"Форуми байналмилалии ангишт - Тоҷикистон 2026",
             hero_subtitle:"\"Ояндаи соҳаи ангишти Осиёи Марказӣ: рушд, навоварӣ ва рушди устувор\"",
             hero_date:"26 декабря 2026",
             hero_place:"шаҳри Душанбе, Тоҷикистон",
