@@ -7,7 +7,7 @@
 
     // Countdown
     function updateCountdown(){
-        const eventDate = new Date('March 26, 2026 09:00:00').getTime();
+        const eventDate = new Date('December 26, 2026 09:00:00').getTime();
         const now = new Date().getTime();
         const distance = eventDate - now;
         if (distance <= 0) return;
