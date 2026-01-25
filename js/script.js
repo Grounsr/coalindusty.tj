@@ -44,16 +44,50 @@ updateCountdown();
         });
     });
 
-    // Simple form handler
-    document.getElementById('registrationForm').addEventListener('submit',e=>{
-        e.preventDefault();
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const form = this;
+    const formData = new FormData(form);
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // Блокируем кнопку на время отправки
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + 
+        (currentLang === 'ru' ? 'Отправка...' : currentLang === 'tj' ? 'Фиристодан...' : 'Sending...');
+    
+    fetch('send-form.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(currentLang === 'ru' 
+                ? 'Спасибо за регистрацию! Мы свяжемся с вами по email.'
+                : currentLang === 'tj'
+                    ? 'Ташаккур барои бақайдгирӣ! Мо тавассути email бо шумо тамос мегирем.'
+                    : 'Thank you for registering! We will contact you by email.');
+            form.reset();
+        } else {
+            throw new Error(data.error || 'Unknown error');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
         alert(currentLang === 'ru'
-            ? 'Спасибо за регистрацию! Мы свяжемся с вами по email.'
+            ? 'Ошибка отправки. Попробуйте ещё раз или напишите на reg@coalindustry.tj'
             : currentLang === 'tj'
-                ? 'Ташаккур барои бақайдгирӣ! Мо тавассути почтаи электронӣ бо шумо тамос мегирем.'
-                : 'Thank you for registering! We will contact you by email.'
-        );
+                ? 'Хатои фиристодан. Лутфан такрор кӯшиш кунед ё ба reg@coalindustry.tj нависед.'
+                : 'Submission error. Please try again or email reg@coalindustry.tj');
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> ' +
+            (currentLang === 'ru' ? 'Отправить заявку' : currentLang === 'tj' ? 'Фиристодани дархост' : 'Submit Registration');
     });
+});
+
 
     const translations = {
         en: {
