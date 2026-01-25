@@ -1,82 +1,124 @@
 <?php
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
+// Настройки
+$to = 'reg@coalindustry.tj';
+$subject_prefix = 'Coal Forum 2026 - Новая регистрация: ';
 
+// Защита от спама
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(['error' => 'Method not allowed']);
-    exit;
+    die(json_encode(['success' => false, 'error' => 'Method not allowed']));
 }
 
-$to = 'reg@coalindustry.tj';
-$subject = 'Новая регистрация на Coal Forum 2026';
+// Проверка обязательных полей
+$required = ['firstName', 'lastName', 'email', 'phone', 'company', 'jobTitle', 'country', 'sector', 'package'];
+foreach ($required as $field) {
+    if (empty($_POST[$field])) {
+        http_response_code(400);
+        die(json_encode(['success' => false, 'error' => "Missing field: $field"]));
+    }
+}
 
-// Сбор данных формы
-$firstName = htmlspecialchars($_POST['firstName'] ?? '');
-$lastName = htmlspecialchars($_POST['lastName'] ?? '');
-$email = htmlspecialchars($_POST['email'] ?? '');
-$phone = htmlspecialchars($_POST['phone'] ?? '');
-$company = htmlspecialchars($_POST['company'] ?? '');
-$jobTitle = htmlspecialchars($_POST['jobTitle'] ?? '');
-$country = htmlspecialchars($_POST['country'] ?? '');
-$sector = htmlspecialchars($_POST['sector'] ?? '');
-$package = htmlspecialchars($_POST['package'] ?? '');
-$days = isset($_POST['days']) ? implode(', ', $_POST['days']) : '';
-$dietary = htmlspecialchars($_POST['dietary'] ?? '');
-$visa = htmlspecialchars($_POST['visa'] ?? '');
-$comments = htmlspecialchars($_POST['comments'] ?? '');
+// Сбор данных
+$firstName = htmlspecialchars(trim($_POST['firstName']));
+$lastName = htmlspecialchars(trim($_POST['lastName']));
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+$phone = htmlspecialchars(trim($_POST['phone']));
+$company = htmlspecialchars(trim($_POST['company']));
+$jobTitle = htmlspecialchars(trim($_POST['jobTitle']));
+$country = htmlspecialchars(trim($_POST['country']));
+$sector = htmlspecialchars(trim($_POST['sector']));
+$package = htmlspecialchars(trim($_POST['package']));
+$days = isset($_POST['days']) ? (is_array($_POST['days']) ? implode(', ', $_POST['days']) : $_POST['days']) : 'Не указано';
+$dietary = htmlspecialchars(trim($_POST['dietary'] ?? 'Не указано'));
+$visa = htmlspecialchars(trim($_POST['visa'] ?? 'Не указано'));
+$comments = htmlspecialchars(trim($_POST['comments'] ?? ''));
+
+// Проверка email
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    die(json_encode(['success' => false, 'error' => 'Invalid email']));
+}
+
+// Названия пакетов
+$packageNames = [
+    'virtual' => 'Онлайн-участие ($150)',
+    'full' => 'Очное участие ($450)',
+    'gov' => 'Госструктуры/Академия ($250)',
+    'vip' => 'VIP-делегация ($1,200)',
+    'booth' => 'Выставочный стенд ($2,500)'
+];
+$packageDisplay = $packageNames[$package] ?? $package;
+
+// Названия стран
+$countryNames = [
+    'TJ' => 'Таджикистан',
+    'UZ' => 'Узбекистан',
+    'KZ' => 'Казахстан',
+    'KG' => 'Кыргызстан',
+    'RU' => 'Россия',
+    'CN' => 'Китай',
+    'TR' => 'Турция',
+    'AE' => 'ОАЭ',
+    'other' => 'Другая'
+];
+$countryDisplay = $countryNames[$country] ?? $country;
 
 // Формирование письма
+$subject = $subject_prefix . $firstName . ' ' . $lastName;
+
 $message = "
-===========================================
-НОВАЯ РЕГИСТРАЦИЯ НА COAL FORUM 2026
-===========================================
+══════════════════════════════════════════
+   МЕЖДУНАРОДНЫЙ УГОЛЬНЫЙ ФОРУМ 2026
+        НОВАЯ ЗАЯВКА НА УЧАСТИЕ
+══════════════════════════════════════════
 
-ЛИЧНЫЕ ДАННЫЕ:
---------------
-Имя: $firstName
-Фамилия: $lastName
-Email: $email
-Телефон: $phone
+▶ ЛИЧНЫЕ ДАННЫЕ
+──────────────────────────────────────────
+   Имя:        $firstName
+   Фамилия:    $lastName
+   Email:      $email
+   Телефон:    $phone
 
-ОРГАНИЗАЦИЯ:
-------------
-Компания: $company
-Должность: $jobTitle
-Страна: $country
-Сектор: $sector
+▶ ОРГАНИЗАЦИЯ
+──────────────────────────────────────────
+   Компания:   $company
+   Должность:  $jobTitle
+   Страна:     $countryDisplay
+   Сектор:     $sector
 
-УЧАСТИЕ:
---------
-Пакет: $package
-Дни участия: $days
-Питание: $dietary
-Визовая поддержка: $visa
+▶ ДЕТАЛИ УЧАСТИЯ
+──────────────────────────────────────────
+   Пакет:              $packageDisplay
+   Дни участия:        $days
+   Питание:            $dietary
+   Визовая поддержка:  $visa
 
-КОММЕНТАРИИ:
-------------
+▶ КОММЕНТАРИИ
+──────────────────────────────────────────
 $comments
 
-===========================================
-Отправлено: " . date('d.m.Y H:i:s') . "
-===========================================
+══════════════════════════════════════════
+   Дата заявки: " . date('d.m.Y в H:i') . "
+   IP: " . $_SERVER['REMOTE_ADDR'] . "
+══════════════════════════════════════════
 ";
 
-$headers = [
-    'From: noreply@coalindustry.tj',
-    'Reply-To: ' . $email,
-    'Content-Type: text/plain; charset=UTF-8',
-    'X-Mailer: PHP/' . phpversion()
-];
+// Заголовки письма
+$headers = "From: Coal Forum <noreply@coalindustry.tj>\r\n";
+$headers .= "Reply-To: $email\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 
-$success = mail($to, $subject, $message, implode("\r\n", $headers));
+// Отправка
+$success = mail($to, "=?UTF-8?B?" . base64_encode($subject) . "?=", $message, $headers);
+
+// Ответ
+header('Content-Type: application/json; charset=utf-8');
 
 if ($success) {
-    echo json_encode(['success' => true, 'message' => 'Registration submitted']);
+    echo json_encode(['success' => true, 'message' => 'Заявка отправлена']);
 } else {
     http_response_code(500);
-    echo json_encode(['error' => 'Failed to send email']);
+    echo json_encode(['success' => false, 'error' => 'Ошибка отправки email']);
 }
 ?>
