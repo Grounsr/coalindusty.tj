@@ -45,11 +45,12 @@
         }
         .nav-links a:hover::after{width:100%;}
         .nav-btn{
-            background:var(--gradient-gold);color:var(--dark);
-            padding:.7rem 1.5rem;border-radius:30px;
-            text-decoration:none;font-weight:600;
-            transition:transform .3s,box-shadow .3s;
-            white-space:nowrap;
+                display: inline-flex;
+                background:var(--gradient-gold);color:var(--dark);
+                padding:.7rem 1.5rem;border-radius:30px;
+                text-decoration:none;font-weight:600;
+                transition:transform .3s,box-shadow .3s;
+                white-space:nowrap;
         }
         .nav-btn:hover{
             transform:translateY(-2px);
@@ -430,10 +431,76 @@
         @media(max-width:900px){
             .venue-content{grid-template-columns:1fr;}
         }
-        @media(max-width:768px){
-            .nav-links{display:none;}
-            .hero h1{font-size:2.4rem;}
-            .form-grid{grid-template-columns:1fr;}
-            .form-group.full-width{grid-column:span 1;}
-            .pricing-card.featured{transform:none;}
-        }
+/* Бургер-кнопка */
+.burger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:28px;
+    height:20px;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    margin-left:1rem;
+}
+.burger span{
+    display:block;
+    width:100%;
+    height:3px;
+    background:var(--light);
+    border-radius:2px;
+    transition:all .3s;
+}
+/* Анимация бургера при открытии */
+.burger.active span:nth-child(1){
+    transform:rotate(45deg) translate(5px,6px);
+}
+.burger.active span:nth-child(2){
+    opacity:0;
+}
+.burger.active span:nth-child(3){
+    transform:rotate(-45deg) translate(5px,-6px);
+}
+
+/* Мобильное меню */
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:rgba(15,15,26,.98);
+        flex-direction:column;
+        padding:1.5rem;
+        gap:0;
+        backdrop-filter:blur(10px);
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+    .nav-links.active{
+        display:flex;
+    }
+    .nav-links li{
+        border-bottom:1px solid rgba(255,255,255,.1);
+    }
+    .nav-links li:last-child{
+        border-bottom:none;
+    }
+    .nav-links a{
+        display:block;
+        padding:1rem 0;
+        font-size:1.1rem;
+    }
+    .nav-btn{
+        display:none;
+    }
+    .burger{
+        display:flex;
+    }
+    .hero h1{font-size:2.4rem;}
+    .form-grid{grid-template-columns:1fr;}
+    .form-group.full-width{grid-column:span 1;}
+    .pricing-card.featured{transform:none;}
+}
+
