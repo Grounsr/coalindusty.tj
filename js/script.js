@@ -656,30 +656,3 @@ updateCountdown();
     });
 
     setLanguage(currentLang);
-
-// Бургер-меню
-const burger = document.getElementById('burger');
-const burgerIcon = document.getElementById('burgerIcon');
-const navLinks = document.getElementById('navLinks');
-
-burger.addEventListener('click', () => {
-    const isActive = navLinks.classList.toggle('active');
-    
-    // Меняем иконку
-    if (isActive) {
-        burgerIcon.classList.remove('fa-bars');
-        burgerIcon.classList.add('fa-times');
-    } else {
-        burgerIcon.classList.remove('fa-times');
-        burgerIcon.classList.add('fa-bars');
-    }
-});
-
-// Закрыть меню при клике на ссылку
-navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        burgerIcon.classList.remove('fa-times');
-        burgerIcon.classList.add('fa-bars');
-    });
-});
