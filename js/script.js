@@ -5,23 +5,33 @@
         else navbar.classList.remove('scrolled');
     });
 
-    // Countdown
-    function updateCountdown(){
-        const eventDate = new Date('December 26, 2026 09:00:00').getTime();
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-        if (distance <= 0) return;
-        const d = Math.floor(distance / (1000*60*60*24));
-        const h = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-        const m = Math.floor((distance % (1000*60*60))/(1000*60));
-        const s = Math.floor((distance % (1000*60))/1000);
-        document.getElementById('days').textContent = d;
-        document.getElementById('hours').textContent = h;
-        document.getElementById('minutes').textContent = m;
-        document.getElementById('seconds').textContent = s;
+// Countdown
+function updateCountdown(){
+    const eventDate = new Date('December 26, 2026 09:00:00').getTime();
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+    
+    if (distance <= 0) {
+        document.getElementById('days').textContent = '0';
+        document.getElementById('hours').textContent = '0';
+        document.getElementById('minutes').textContent = '0';
+        document.getElementById('seconds').textContent = '0';
+        return;
     }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+    
+    const d = Math.floor(distance / (1000*60*60*24));
+    const h = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    const m = Math.floor((distance % (1000*60*60))/(1000*60));
+    const s = Math.floor((distance % (1000*60))/1000);
+    
+    document.getElementById('days').textContent = d;
+    document.getElementById('hours').textContent = h;
+    document.getElementById('minutes').textContent = m;
+    document.getElementById('seconds').textContent = s;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -60,7 +70,7 @@
             hero_badge:"Central Asia's Premier Mining Event",
             hero_title:"International Coal Forum Tajikistan 2026",
             hero_subtitle:"\"Shaping the Future of Central Asian Coal: Growth, Innovation & Sustainable Development\"",
-            hero_date:"March 26–28, 2026",
+            hero_date:"December 26, 2026",
             hero_place:"Dushanbe, Tajikistan",
             hero_cta:"Register Now",
             hero_learn_more:"Learn More",
@@ -104,8 +114,6 @@
             agenda_title:"Forum Agenda",
             agenda_text:"Three days of strategic discussions, case studies, and networking",
             agenda_day1:"Day 1 – March 26",
-            agenda_day2:"Day 2 – March 27",
-            agenda_day3:"Day 3 – March 28",
             agenda1_1_title:"Registration & Welcome Coffee",
             agenda1_1_text:"Badge collection and informal networking",
             agenda1_2_title:"Opening Ceremony & Ministerial Address",
@@ -172,8 +180,6 @@
             reg_package:"Registration Package *",
             reg_days:"Days Attending *",
             reg_day1:"Day 1 – March 26",
-            reg_day2:"Day 2 – March 27",
-            reg_day3:"Day 3 – March 28",
             reg_diet:"Dietary requirements",
             reg_diet_none:"No restrictions",
             reg_diet_veg:"Vegetarian",
@@ -289,8 +295,6 @@
             agenda_title:"Программа форума",
             agenda_text:"Три дня стратегических дискуссий, кейсов и встреч.",
             agenda_day1:"День 1 – 26 марта",
-            agenda_day2:"День 2 – 27 марта",
-            agenda_day3:"День 3 – 28 марта",
             agenda1_1_title:"Регистрация и приветственный кофе",
             agenda1_1_text:"Получение бейджей и первые знакомства.",
             agenda1_2_title:"Открытие форума и приветствие",
@@ -357,8 +361,6 @@
             reg_package:"Пакет участия *",
             reg_days:"Дни участия *",
             reg_day1:"День 1 – 26 марта",
-            reg_day2:"День 2 – 27 марта",
-            reg_day3:"День 3 – 28 марта",
             reg_diet:"Пищевые предпочтения",
             reg_diet_none:"Без ограничений",
             reg_diet_veg:"Вегетарианское питание",
