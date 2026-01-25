@@ -3,561 +3,572 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>International Coal Forum Tajikistan 2026</title>
+    <title data-i18n="meta_title">International Coal Forum Tajikistan 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link rel="stylesheet" scr="css/styles.css">
+    </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="logo">
-            <i class="fas fa-mountain"></i>
-            <span>COAL FORUM TJ</span>
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <i class="fas fa-mountain"></i>
+        <span>COAL FORUM TJ</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#topics" data-i18n="nav_topics">Topics</a></li>
+        <li><a href="#agenda" data-i18n="nav_agenda">Agenda</a></li>
+        <li><a href="#speakers" data-i18n="nav_speakers">Speakers</a></li>
+        <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+        <li><a href="#venue" data-i18n="nav_venue">Venue</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+        <div class="lang-switcher">
+            <button data-lang="en" class="lang-btn active">EN</button>
+            <button data-lang="ru" class="lang-btn">RU</button>
+            <button data-lang="tj" class="lang-btn">TJ</button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#agenda">Agenda</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#venue">Venue</a></li>
-        </ul>
-        <a href="#registration" class="nav-btn">Register Now</a>
-    </nav>
+        <a href="#registration" class="nav-btn" data-i18n="nav_register">Register Now</a>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-particles">
-            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-            <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-            <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-            <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
-            <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
-            <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-            <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
-            <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
-            <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+<section class="hero" id="home">
+    <div class="hero-particles">
+        <div class="particle" style="left:10%;animation-delay:0s;"></div>
+        <div class="particle" style="left:20%;animation-delay:2s;"></div>
+        <div class="particle" style="left:30%;animation-delay:4s;"></div>
+        <div class="particle" style="left:40%;animation-delay:1s;"></div>
+        <div class="particle" style="left:50%;animation-delay:3s;"></div>
+        <div class="particle" style="left:60%;animation-delay:5s;"></div>
+        <div class="particle" style="left:70%;animation-delay:2.5s;"></div>
+        <div class="particle" style="left:80%;animation-delay:4.5s;"></div>
+        <div class="particle" style="left:90%;animation-delay:1.5s;"></div>
+    </div>
+    <div class="hero-content">
+        <span class="hero-badge" data-i18n="hero_badge">
+          Central Asia's Premier Mining Event
+        </span>
+        <h1 data-i18n="hero_title">International Coal Forum Tajikistan 2026</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          "Shaping the Future of Central Asian Coal: Growth, Innovation & Sustainable Development"
+        </p>
+        <div class="hero-date">
+            <div class="hero-date-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span data-i18n="hero_date">March 26–28, 2026</span>
+            </div>
+            <div class="hero-date-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-i18n="hero_place">Dushanbe, Tajikistan</span>
+            </div>
         </div>
-        <div class="hero-content">
-            <span class="hero-badge">🏛️ Central Asia's Premier Mining Event</span>
-            <h1>International Coal Forum Tajikistan 2026</h1>
-            <p class="hero-subtitle">"Shaping the Future of Central Asian Coal: Growth, Innovation & Sustainable Development"</p>
-            <div class="hero-date">
-                <div class="hero-date-item">
-                    <i class="fas fa-calendar-alt"></i>
-                    <span>March 26-28, 2026</span>
+        <div class="hero-buttons">
+            <a href="#registration" class="btn-primary" data-i18n="hero_cta">
+                Register Now
+            </a>
+            <a href="#about" class="btn-secondary" data-i18n="hero_learn_more">
+                Learn More
+            </a>
+        </div>
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">60</div>
+                <div class="countdown-label" data-i18n="cd_days">Days</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">12</div>
+                <div class="countdown-label" data-i18n="cd_hours">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">34</div>
+                <div class="countdown-label" data-i18n="cd_minutes">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">56</div>
+                <div class="countdown-label" data-i18n="cd_seconds">Seconds</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="section-header">
+        <h2 data-i18n="about_title">About The Forum</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="about_text">
+            Join 500+ industry leaders, government officials, and investors at Central Asia's most influential coal and mining conference
+        </p>
+    </div>
+    <div class="about-grid">
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-chart-line"></i></div>
+            <h3 data-i18n="about_card1_title">Market Insights</h3>
+            <p data-i18n="about_card1_text">
+                Gain exclusive access to the latest market data, forecasts, and analysis from leading industry experts
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-handshake"></i></div>
+            <h3 data-i18n="about_card2_title">Networking</h3>
+            <p data-i18n="about_card2_text">
+                Connect with decision-makers from mining companies, government bodies, and financial institutions
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
+            <h3 data-i18n="about_card3_title">Innovation</h3>
+            <p data-i18n="about_card3_text">
+                Discover cutting-edge technologies and sustainable practices transforming the coal industry
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="about-icon"><i class="fas fa-dollar-sign"></i></div>
+            <h3 data-i18n="about_card4_title">Investment</h3>
+            <p data-i18n="about_card4_text">
+                Explore multibillion-dollar energy and mining opportunities in Tajikistan and Central Asia
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <h3>500+</h3>
+            <p data-i18n="stat_attendees">Attendees</p>
+        </div>
+        <div class="stat-item">
+            <h3>50+</h3>
+            <p data-i18n="stat_speakers">Speakers</p>
+        </div>
+        <div class="stat-item">
+            <h3>30+</h3>
+            <p data-i18n="stat_countries">Countries</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.5B</h3>
+            <p data-i18n="stat_reserves">Tonnes of coal reserves</p>
+        </div>
+    </div>
+</section>
+
+<section class="topics" id="topics">
+    <div class="section-header">
+        <h2 data-i18n="topics_title">Key Discussion Topics</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="topics_text">Comprehensive coverage of the most important trends and challenges in the coal and energy sector</p>
+    </div>
+    <div class="topics-grid">
+        <div class="topic-card">
+            <span class="topic-number">01</span>
+            <div>
+                <h4 data-i18n="topic1_title">Coal Market Outlook 2026–2030</h4>
+                <p data-i18n="topic1_text">Supply, demand and price scenarios for Central Asia and key export markets</p>
+            </div>
+        </div>
+        <div class="topic-card">
+            <span class="topic-number">02</span>
+            <div>
+                <h4 data-i18n="topic2_title">Mining Strategy & Regulation</h4>
+                <p data-i18n="topic2_text">Licensing, safety, and environmental requirements for new projects</p>
+            </div>
+        </div>
+        <div class="topic-card">
+            <span class="topic-number">03</span>
+            <div>
+                <h4 data-i18n="topic3_title">Industrial Coal Use</h4>
+                <p data-i18n="topic3_text">Cement, metallurgy, and industrial consumers in Tajikistan and the region</p>
+            </div>
+        </div>
+        <div class="topic-card">
+            <span class="topic-number">04</span>
+            <div>
+                <h4 data-i18n="topic4_title">Power Generation</h4>
+                <p data-i18n="topic4_text">Coal-based power projects and integration with hydropower</p>
+            </div>
+        </div>
+        <div class="topic-card">
+            <span class="topic-number">05</span>
+            <div>
+                <h4 data-i18n="topic5_title">Investment & Finance</h4>
+                <p data-i18n="topic5_text">Structuring projects, risk mitigation, and access to capital</p>
+            </div>
+        </div>
+        <div class="topic-card">
+            <span class="topic-number">06</span>
+            <div>
+                <h4 data-i18n="topic6_title">Sustainability & ESG</h4>
+                <p data-i18n="topic6_text">Cleaner technologies, rehabilitation of coal regions, and community development</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="agenda" id="agenda">
+    <div class="section-header">
+        <h2 data-i18n="agenda_title">Forum Agenda</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="agenda_text">Three days of strategic discussions, case studies, and networking</p>
+    </div>
+    <div class="agenda-tabs">
+        <button class="agenda-tab active" data-i18n="agenda_day1">Day 1 – March 26</button>
+        <button class="agenda-tab" data-i18n="agenda_day2">Day 2 – March 27</button>
+        <button class="agenda-tab" data-i18n="agenda_day3">Day 3 – March 28</button>
+    </div>
+    <div class="agenda-content">
+        <div class="agenda-item">
+            <div class="agenda-time">09:00</div>
+            <div class="agenda-details">
+                <h4 data-i18n="agenda1_1_title">Registration & Welcome Coffee</h4>
+                <p data-i18n="agenda1_1_text">Badge collection and informal networking</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">10:00</div>
+            <div class="agenda-details">
+                <h4 data-i18n="agenda1_2_title">Opening Ceremony & Ministerial Address</h4>
+                <p data-i18n="agenda1_2_text">Official welcome from government representatives</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">11:30</div>
+            <div class="agenda-details">
+                <h4 data-i18n="agenda1_3_title">Keynote: Tajikistan's Coal Vision 2030</h4>
+                <p data-i18n="agenda1_3_text">Long-term strategy for coal and mining sector development</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">14:00</div>
+            <div class="agenda-details">
+                <h4 data-i18n="agenda1_4_title">Panel: Global Coal Market Dynamics</h4>
+                <p data-i18n="agenda1_4_text">International experts share perspectives on demand and trade flows</p>
+            </div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">17:00</div>
+            <div class="agenda-details">
+                <h4 data-i18n="agenda1_5_title">Networking Reception</h4>
+                <p data-i18n="agenda1_5_text">Evening reception for business introductions and deal-making</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="speakers" id="speakers">
+    <div class="section-header">
+        <h2 data-i18n="speakers_title">Featured Speakers</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="speakers_text">Hear from senior government officials, industry executives, and financial institutions</p>
+    </div>
+    <div class="speakers-grid">
+        <div class="speaker-card">
+            <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
+            <div class="speaker-info">
+                <h4 data-i18n="speaker1_name">Senior Official</h4>
+                <p data-i18n="speaker1_role">Government Policy</p>
+                <span data-i18n="speaker1_org">Ministry of Industry & New Technologies</span>
+            </div>
+        </div>
+        <div class="speaker-card">
+            <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
+            <div class="speaker-info">
+                <h4 data-i18n="speaker2_name">Energy Leader</h4>
+                <p data-i18n="speaker2_role">Energy Integration</p>
+                <span data-i18n="speaker2_org">Ministry of Energy & Water Resources</span>
+            </div>
+        </div>
+        <div class="speaker-card">
+            <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
+            <div class="speaker-info">
+                <h4 data-i18n="speaker3_name">Mining Executive</h4>
+                <p data-i18n="speaker3_role">Operations & Technology</p>
+                <span data-i18n="speaker3_org">International Mining Company</span>
+            </div>
+        </div>
+        <div class="speaker-card">
+            <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
+            <div class="speaker-info">
+                <h4 data-i18n="speaker4_name">Investment Director</h4>
+                <p data-i18n="speaker4_role">Finance & Deals</p>
+                <span data-i18n="speaker4_org">Regional Development Bank</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing" id="pricing">
+    <div class="section-header">
+        <h2 data-i18n="pricing_title">Registration Packages</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="pricing_text">Early bird rates apply until 15 February 2026</p>
+    </div>
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3 data-i18n="price_virtual_title">Virtual Access</h3>
+            <div class="pricing-original" data-i18n="price_virtual_old">$200</div>
+            <div class="pricing-price"><span data-i18n="price_virtual_new">$150</span><span>/person</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i><span data-i18n="price_virtual_f1">Live streaming of all sessions</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_virtual_f2">Digital conference materials</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_virtual_f3">Virtual networking tools</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_virtual_f4">Access to recordings</span></li>
+            </ul>
+            <a href="#registration" class="btn-primary" style="width:100%;justify-content:center;" data-i18n="price_select">Select</a>
+        </div>
+        <div class="pricing-card featured">
+            <span class="pricing-badge" data-i18n="price_best">Most Popular</span>
+            <h3 data-i18n="price_full_title">Full Access</h3>
+            <div class="pricing-original" data-i18n="price_full_old">$600</div>
+            <div class="pricing-price"><span data-i18n="price_full_new">$450</span><span>/person</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i><span data-i18n="price_full_f1">All sessions and workshops</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_full_f2">Coffee breaks and lunches</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_full_f3">Networking events</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_full_f4">Gala dinner</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_full_f5">Site visit (optional)</span></li>
+            </ul>
+            <a href="#registration" class="btn-primary" style="width:100%;justify-content:center;" data-i18n="price_select">Select</a>
+        </div>
+        <div class="pricing-card">
+            <h3 data-i18n="price_vip_title">VIP Delegation</h3>
+            <div class="pricing-price"><span data-i18n="price_vip_new">$1,200</span><span>/person</span></div>
+            <ul class="pricing-features">
+                <li><i class="fas fa-check"></i><span data-i18n="price_vip_f1">All Full Access benefits</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_vip_f2">Premium front-row seating</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_vip_f3">VIP lounge and concierge</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_vip_f4">Exclusive roundtables</span></li>
+                <li><i class="fas fa-check"></i><span data-i18n="price_vip_f5">Airport transfer</span></li>
+            </ul>
+            <a href="#registration" class="btn-primary" style="width:100%;justify-content:center;" data-i18n="price_select">Select</a>
+        </div>
+    </div>
+</section>
+
+<section class="registration" id="registration">
+    <div class="section-header">
+        <h2 data-i18n="reg_title">Register Now</h2>
+        <div class="accent-line"></div>
+        <p data-i18n="reg_text">Complete the form below to secure your place at the forum</p>
+    </div>
+    <div class="form-container">
+        <form id="registrationForm">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="firstName" data-i18n="reg_first_name">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" required>
                 </div>
-                <div class="hero-date-item">
+                <div class="form-group">
+                    <label for="lastName" data-i18n="reg_last_name">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-i18n="reg_email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-i18n="reg_phone">Phone *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="company" data-i18n="reg_company">Company / Organization *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="jobTitle" data-i18n="reg_job">Job Title *</label>
+                    <input type="text" id="jobTitle" name="jobTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="country" data-i18n="reg_country">Country *</label>
+                    <select id="country" name="country" required>
+                        <option value="">—</option>
+                        <option value="TJ">Tajikistan</option>
+                        <option value="UZ">Uzbekistan</option>
+                        <option value="KZ">Kazakhstan</option>
+                        <option value="KG">Kyrgyzstan</option>
+                        <option value="RU">Russia</option>
+                        <option value="CN">China</option>
+                        <option value="TR">Turkey</option>
+                        <option value="AE">UAE</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sector" data-i18n="reg_sector">Industry Sector *</label>
+                    <select id="sector" name="sector" required>
+                        <option value="">—</option>
+                        <option value="mining" data-i18n="sector_mining">Mining & Extraction</option>
+                        <option value="energy" data-i18n="sector_energy">Energy & Power</option>
+                        <option value="equipment" data-i18n="sector_equipment">Equipment & Technology</option>
+                        <option value="logistics" data-i18n="sector_logistics">Transportation & Logistics</option>
+                        <option value="government" data-i18n="sector_government">Government & Regulation</option>
+                        <option value="finance" data-i18n="sector_finance">Finance & Investment</option>
+                        <option value="academia" data-i18n="sector_academia">Research & Academia</option>
+                        <option value="media" data-i18n="sector_media">Media & Press</option>
+                        <option value="other" data-i18n="sector_other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="package" data-i18n="reg_package">Registration Package *</label>
+                    <select id="package" name="package" required>
+                        <option value="">—</option>
+                        <option value="virtual" data-i18n="reg_pkg_virtual">Virtual Access</option>
+                        <option value="full" data-i18n="reg_pkg_full">Full Access</option>
+                        <option value="gov" data-i18n="reg_pkg_gov">Government / Academic</option>
+                        <option value="vip" data-i18n="reg_pkg_vip">VIP Delegation</option>
+                        <option value="booth" data-i18n="reg_pkg_booth">Exhibition Booth</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label data-i18n="reg_days">Days Attending *</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="days" value="day1">
+                            <span data-i18n="reg_day1">Day 1 – March 26</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="days" value="day2">
+                            <span data-i18n="reg_day2">Day 2 – March 27</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="days" value="day3">
+                            <span data-i18n="reg_day3">Day 3 – March 28</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dietary" data-i18n="reg_diet">Dietary requirements</label>
+                    <select id="dietary" name="dietary">
+                        <option value="none" data-i18n="reg_diet_none">No restrictions</option>
+                        <option value="vegetarian" data-i18n="reg_diet_veg">Vegetarian</option>
+                        <option value="halal" data-i18n="reg_diet_halal">Halal</option>
+                        <option value="other" data-i18n="reg_diet_other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="visa" data-i18n="reg_visa">Visa support letter needed?</label>
+                    <select id="visa" name="visa">
+                        <option value="no" data-i18n="reg_visa_no">No</option>
+                        <option value="yes" data-i18n="reg_visa_yes">Yes</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label for="comments" data-i18n="reg_comments">Special requests / comments</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+                <div class="form-group full-width">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="terms" required>
+                        <span data-i18n="reg_terms">I agree to the Terms & Conditions and Privacy Policy *</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="newsletter">
+                        <span data-i18n="reg_newsletter">I agree to receive event updates by email</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-submit">
+                <button type="submit">
+                    <i class="fas fa-paper-plane"></i>
+                    <span data-i18n="reg_submit">Submit Registration</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="venue" id="venue">
+    <div class="section-header">
+        <h2 data-i18n="venue_title">Venue & Location</h2>
+        <div class="accent-line"></div>
+    </div>
+    <div class="venue-content">
+        <div class="venue-info">
+            <h3 data-i18n="venue_name">Hyatt Regency Dushanbe</h3>
+            <ul class="venue-details">
+                <li>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>Dushanbe, Tajikistan</span>
-                </div>
-            </div>
-            <div class="hero-buttons">
-                <a href="#registration" class="btn-primary">
-                    <i class="fas fa-ticket-alt"></i>
-                    Register Now
-                </a>
-                <a href="#about" class="btn-secondary">Learn More</a>
-            </div>
-            <div class="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">60</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">12</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">34</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="seconds">56</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
-            </div>
+                    <span data-i18n="venue_addr">26/1 Ismoili Somoni Avenue, Dushanbe, Tajikistan</span>
+                </li>
+                <li>
+                    <i class="fas fa-plane"></i>
+                    <span data-i18n="venue_airport">15 minutes from Dushanbe International Airport</span>
+                </li>
+                <li>
+                    <i class="fas fa-hotel"></i>
+                    <span data-i18n="venue_hotel">5-star accommodation with special rates for delegates</span>
+                </li>
+                <li>
+                    <i class="fas fa-utensils"></i>
+                    <span data-i18n="venue_food">High-quality catering and coffee breaks</span>
+                </li>
+                <li>
+                    <i class="fas fa-wifi"></i>
+                    <span data-i18n="venue_wifi">High-speed Wi-Fi throughout the venue</span>
+                </li>
+            </ul>
         </div>
-    </section>
+        <div class="venue-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.891!2d68.7741!3d38.5598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDMzJzM1LjMiTiA2OMKwNDYnMjYuOCJF!5e0!3m2!1sen!2s!4v1234567890" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="section-header">
-            <h2>About The Forum</h2>
-            <div class="accent-line"></div>
-            <p>Join 500+ industry leaders, government officials, and investors at Central Asia's most influential coal and mining conference</p>
-        </div>
-        <div class="about-grid">
-            <div class="about-card">
-                <div class="about-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Market Insights</h3>
-                <p>Gain exclusive access to the latest market data, forecasts, and analysis from leading industry experts</p>
-            </div>
-            <div class="about-card">
-                <div class="about-icon"><i class="fas fa-handshake"></i></div>
-                <h3>Networking</h3>
-                <p>Connect with decision-makers from mining companies, government bodies, and financial institutions</p>
-            </div>
-            <div class="about-card">
-                <div class="about-icon"><i class="fas fa-lightbulb"></i></div>
-                <h3>Innovation</h3>
-                <p>Discover cutting-edge technologies and sustainable practices transforming the coal industry</p>
-            </div>
-            <div class="about-card">
-                <div class="about-icon"><i class="fas fa-dollar-sign"></i></div>
-                <h3>Investment</h3>
-                <p>Explore $6.5 billion in energy sector opportunities within Tajikistan's growing economy</p>
-            </div>
-        </div>
-    </section>
+<section class="partners">
+    <div class="section-header">
+        <h2 data-i18n="partners_title">Partners & Sponsors</h2>
+        <div class="accent-line"></div>
+    </div>
+    <div class="partners-grid">
+        <div class="partner-logo" data-i18n="partner1">Strategic Partner</div>
+        <div class="partner-logo" data-i18n="partner2">Gold Sponsor</div>
+        <div class="partner-logo" data-i18n="partner3">Silver Sponsor</div>
+        <div class="partner-logo" data-i18n="partner4">Industry Partner</div>
+        <div class="partner-logo" data-i18n="partner5">Media Partner</div>
+    </div>
+</section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <h3>500+</h3>
-                <p>Attendees</p>
-            </div>
-            <div class="stat-item">
-                <h3>50+</h3>
-                <p>Speakers</p>
-            </div>
-            <div class="stat-item">
-                <h3>30+</h3>
-                <p>Countries</p>
-            </div>
-            <div class="stat-item">
-                <h3>4.5B</h3>
-                <p>Tonnes Reserves</p>
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4 data-i18n="footer_about_title">International Coal Forum</h4>
+            <p style="color:rgba(255,255,255,.7);margin-bottom:.9rem;" data-i18n="footer_about_text">
+                Central Asia's leading platform for the coal and mining industry.
+            </p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-telegram-plane"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
-    </section>
-
-    <!-- Topics Section -->
-    <section class="topics" id="topics">
-        <div class="section-header">
-            <h2>Key Discussion Topics</h2>
-            <div class="accent-line"></div>
-            <p>Comprehensive coverage of the most pressing issues in the coal and energy sector</p>
+        <div class="footer-col">
+            <h4 data-i18n="footer_links_title">Quick Links</h4>
+            <ul>
+                <li><a href="#about" data-i18n="footer_link_about">About</a></li>
+                <li><a href="#agenda" data-i18n="footer_link_agenda">Agenda</a></li>
+                <li><a href="#speakers" data-i18n="footer_link_speakers">Speakers</a></li>
+                <li><a href="#pricing" data-i18n="footer_link_pricing">Registration</a></li>
+                <li><a href="#registration" data-i18n="footer_link_register">Register</a></li>
+            </ul>
         </div>
-        <div class="topics-grid">
-            <div class="topic-card">
-                <span class="topic-number">01</span>
-                <div>
-                    <h4>Coal Market Outlook 2026-2030</h4>
-                    <p>Supply forecasts, demand patterns, and price projections for Central Asia</p>
-                </div>
-            </div>
-            <div class="topic-card">
-                <span class="topic-number">02</span>
-                <div>
-                    <h4>Mining Strategy 2026-2030</h4>
-                    <p>New regulatory framework, licensing, and environmental standards</p>
-                </div>
-            </div>
-            <div class="topic-card">
-                <span class="topic-number">03</span>
-                <div>
-                    <h4>Industrial Applications</h4>
-                    <p>Coal consumption in cement, metallurgy, and manufacturing sectors</p>
-                </div>
-            </div>
-            <div class="topic-card">
-                <span class="topic-number">04</span>
-                <div>
-                    <h4>Energy Generation Projects</h4>
-                    <p>260 MW coal-powered capacity developments and future plans</p>
-                </div>
-            </div>
-            <div class="topic-card">
-                <span class="topic-number">05</span>
-                <div>
-                    <h4>Investment Opportunities</h4>
-                    <p>$6.5 billion energy sector investment program overview</p>
-                </div>
-            </div>
-            <div class="topic-card">
-                <span class="topic-number">06</span>
-                <div>
-                    <h4>Sustainable Mining</h4>
-                    <p>Modernization, ESG compliance, and full-cycle resource processing</p>
-                </div>
-            </div>
+        <div class="footer-col">
+            <h4 data-i18n="footer_contact_title">Contact</h4>
+            <ul>
+                <li><i class="fas fa-envelope" style="color:var(--gold);margin-right:8px;"></i><span>info@coalforum.tj</span></li>
+                <li><i class="fas fa-phone" style="color:var(--gold);margin-right:8px;"></i><span>+992 37 221-XXXX</span></li>
+                <li><i class="fas fa-globe" style="color:var(--gold);margin-right:8px;"></i><span>www.coalforum.tj</span></li>
+            </ul>
         </div>
-    </section>
-
-    <!-- Agenda Section -->
-    <section class="agenda" id="agenda">
-        <div class="section-header">
-            <h2>Forum Agenda</h2>
-            <div class="accent-line"></div>
-            <p>Three days of insights, discussions, and networking opportunities</p>
+        <div class="footer-col">
+            <h4 data-i18n="footer_org_title">Organized by</h4>
+            <p style="color:rgba(255,255,255,.7);" data-i18n="footer_org_text">
+                Ministry of Industry and New Technologies of the Republic of Tajikistan.
+            </p>
         </div>
-        <div class="agenda-tabs">
-            <button class="agenda-tab active">Day 1 - March 26</button>
-            <button class="agenda-tab">Day 2 - March 27</button>
-            <button class="agenda-tab">Day 3 - March 28</button>
-        </div>
-        <div class="agenda-content">
-            <div class="agenda-item">
-                <div class="agenda-time">09:00</div>
-                <div class="agenda-details">
-                    <h4>Registration & Welcome Coffee</h4>
-                    <p>Badge collection and networking breakfast</p>
-                </div>
-            </div>
-            <div class="agenda-item">
-                <div class="agenda-time">10:00</div>
-                <div class="agenda-details">
-                    <h4>Opening Ceremony & Ministerial Address</h4>
-                    <p>Welcome remarks from government officials</p>
-                </div>
-            </div>
-            <div class="agenda-item">
-                <div class="agenda-time">11:30</div>
-                <div class="agenda-details">
-                    <h4>Keynote: Tajikistan's Vision for Coal Industry 2030</h4>
-                    <p>Strategic outlook and policy directions</p>
-                </div>
-            </div>
-            <div class="agenda-item">
-                <div class="agenda-time">14:00</div>
-                <div class="agenda-details">
-                    <h4>Panel: Global Coal Market Dynamics</h4>
-                    <p>International experts discuss market trends</p>
-                </div>
-            </div>
-            <div class="agenda-item">
-                <div class="agenda-time">17:00</div>
-                <div class="agenda-details">
-                    <h4>Networking Reception</h4>
-                    <p>Evening cocktails and business card exchange</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speakers Section -->
-    <section class="speakers" id="speakers">
-        <div class="section-header">
-            <h2>Featured Speakers</h2>
-            <div class="accent-line"></div>
-            <p>Learn from industry leaders and government officials</p>
-        </div>
-        <div class="speakers-grid">
-            <div class="speaker-card">
-                <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
-                <div class="speaker-info">
-                    <h4>Ministry Representative</h4>
-                    <p>Government Policy</p>
-                    <span>Ministry of Industry & New Technologies</span>
-                </div>
-            </div>
-            <div class="speaker-card">
-                <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
-                <div class="speaker-info">
-                    <h4>Energy Sector Lead</h4>
-                    <p>Energy Integration</p>
-                    <span>Ministry of Energy & Water Resources</span>
-                </div>
-            </div>
-            <div class="speaker-card">
-                <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
-                <div class="speaker-info">
-                    <h4>Mining Executive</h4>
-                    <p>Global Best Practices</p>
-                    <span>International Mining Corporation</span>
-                </div>
-            </div>
-            <div class="speaker-card">
-                <div class="speaker-img"><i class="fas fa-user-tie"></i></div>
-                <div class="speaker-info">
-                    <h4>Investment Director</h4>
-                    <p>Financing Solutions</p>
-                    <span>Central Asia Development Bank</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="section-header">
-            <h2>Registration Packages</h2>
-            <div class="accent-line"></div>
-            <p>Early bird pricing available until February 15, 2026</p>
-        </div>
-        <div class="pricing-grid">
-            <div class="pricing-card">
-                <h3>Virtual Access</h3>
-                <div class="pricing-original">$200</div>
-                <div class="pricing-price">$150<span>/person</span></div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Live streaming all sessions</li>
-                    <li><i class="fas fa-check"></i> Digital conference materials</li>
-                    <li><i class="fas fa-check"></i> Virtual networking platform</li>
-                    <li><i class="fas fa-check"></i> Session recordings access</li>
-                    <li><i class="fas fa-check"></i> Digital certificate</li>
-                </ul>
-                <a href="#registration" class="btn-primary" style="width:100%; justify-content:center;">Select</a>
-            </div>
-            <div class="pricing-card featured">
-                <span class="pricing-badge">Most Popular</span>
-                <h3>Full Access</h3>
-                <div class="pricing-original">$600</div>
-                <div class="pricing-price">$450<span>/person</span></div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> All sessions & workshops</li>
-                    <li><i class="fas fa-check"></i> Conference materials</li>
-                    <li><i class="fas fa-check"></i> Meals & refreshments</li>
-                    <li><i class="fas fa-check"></i> Networking events</li>
-                    <li><i class="fas fa-check"></i> Gala dinner access</li>
-                    <li><i class="fas fa-check"></i> Site visit (Day 3)</li>
-                </ul>
-                <a href="#registration" class="btn-primary" style="width:100%; justify-content:center;">Select</a>
-            </div>
-            <div class="pricing-card">
-                <h3>VIP Delegation</h3>
-                <div class="pricing-price">$1,200<span>/person</span></div>
-                <ul class="pricing-features">
-                    <li><i class="fas fa-check"></i> Everything in Full Access</li>
-                    <li><i class="fas fa-check"></i> Premium front-row seating</li>
-                    <li><i class="fas fa-check"></i> Exclusive roundtables</li>
-                    <li><i class="fas fa-check"></i> VIP lounge access</li>
-                    <li><i class="fas fa-check"></i> Airport transfers</li>
-                    <li><i class="fas fa-check"></i> Priority B2B matching</li>
-                </ul>
-                <a href="#registration" class="btn-primary" style="width:100%; justify-content:center;">Select</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Form -->
-    <section class="registration" id="registration">
-        <div class="section-header">
-            <h2>Register Now</h2>
-            <div class="accent-line"></div>
-            <p>Secure your spot at the International Coal Forum Tajikistan 2026</p>
-        </div>
-        <div class="form-container">
-            <form id="registrationForm">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="firstName">First Name *</label>
-                        <input type="text" id="firstName" name="firstName" required placeholder="Enter your first name">
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name *</label>
-                        <input type="text" id="lastName" name="lastName" required placeholder="Enter your last name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="your@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="+992 XXX XXX XXX">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company / Organization *</label>
-                        <input type="text" id="company" name="company" required placeholder="Your company name">
-                    </div>
-                    <div class="form-group">
-                        <label for="jobTitle">Job Title *</label>
-                        <input type="text" id="jobTitle" name="jobTitle" required placeholder="Your position">
-                    </div>
-                    <div class="form-group">
-                        <label for="country">Country *</label>
-                        <select id="country" name="country" required>
-                            <option value="">Select Country</option>
-                            <option value="TJ">Tajikistan</option>
-                            <option value="UZ">Uzbekistan</option>
-                            <option value="KZ">Kazakhstan</option>
-                            <option value="KG">Kyrgyzstan</option>
-                            <option value="TM">Turkmenistan</option>
-                            <option value="RU">Russia</option>
-                            <option value="CN">China</option>
-                            <option value="AF">Afghanistan</option>
-                            <option value="PK">Pakistan</option>
-                            <option value="IR">Iran</option>
-                            <option value="TR">Turkey</option>
-                            <option value="AE">UAE</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="sector">Industry Sector *</label>
-                        <select id="sector" name="sector" required>
-                            <option value="">Select Sector</option>
-                            <option value="mining">Mining & Extraction</option>
-                            <option value="energy">Energy & Power</option>
-                            <option value="equipment">Equipment & Technology</option>
-                            <option value="logistics">Transportation & Logistics</option>
-                            <option value="government">Government & Regulatory</option>
-                            <option value="finance">Finance & Investment</option>
-                            <option value="consulting">Consulting & Legal</option>
-                            <option value="academia">Research & Academia</option>
-                            <option value="media">Media & Press</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="package">Registration Package *</label>
-                        <select id="package" name="package" required>
-                            <option value="">Select Package</option>
-                            <option value="virtual">Virtual Access - $150 (Early Bird)</option>
-                            <option value="full">Full Access - $450 (Early Bird)</option>
-                            <option value="government">Government/Academic - $250 (Early Bird)</option>
-                            <option value="vip">VIP Delegation - $1,200</option>
-                            <option value="booth">Exhibition Booth - $2,500 (Early Bird)</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label>Days Attending *</label>
-                        <div class="checkbox-group">
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="days" value="day1"> Day 1 - March 26
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="days" value="day2"> Day 2 - March 27
-                            </label>
-                            <label class="checkbox-item">
-                                <input type="checkbox" name="days" value="day3"> Day 3 - March 28
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="dietary">Dietary Requirements</label>
-                        <select id="dietary" name="dietary">
-                            <option value="none">No restrictions</option>
-                            <option value="vegetarian">Vegetarian</option>
-                            <option value="halal">Halal</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="visa">Visa Support Letter Needed? *</label>
-                        <select id="visa" name="visa" required>
-                            <option value="no">No</option>
-                            <option value="yes">Yes</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="comments">Special Requests / Comments</label>
-                        <textarea id="comments" name="comments" rows="3" placeholder="Any special requirements or questions..."></textarea>
-                    </div>
-                    <div class="form-group full-width">
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="terms" required> I agree to the Terms & Conditions and Privacy Policy *
-                        </label>
-                        <label class="checkbox-item">
-                            <input type="checkbox" name="newsletter"> I consent to receiving event updates via email
-                        </label>
-                    </div>
-                </div>
-                <div class="form-submit">
-                    <button type="submit">
-                        <i class="fas fa-paper-plane"></i> Submit Registration
-                    </button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <!-- Venue Section -->
-    <section class="venue" id="venue">
-        <div class="section-header">
-            <h2>Venue & Location</h2>
-            <div class="accent-line"></div>
-        </div>
-        <div class="venue-content">
-            <div class="venue-info">
-                <h3>Hyatt Regency Dushanbe</h3>
-                <ul class="venue-details">
-                    <li>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>26/1 Ismoili Somoni Avenue, Dushanbe, Tajikistan</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-plane"></i>
-                        <span>15 minutes from Dushanbe International Airport</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-hotel"></i>
-                        <span>5-star accommodation with special rates for attendees</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-utensils"></i>
-                        <span>World-class dining and conference facilities</span>
-                    </li>
-                    <li>
-                        <i class="fas fa-wifi"></i>
-                        <span>High-speed WiFi throughout the venue</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="venue-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.891!2d68.7741!3d38.5598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDMzJzM1LjMiTiA2OMKwNDYnMjYuOCJF!5e0!3m2!1sen!2s!4v1234567890" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="partners">
-        <div class="section-header">
-            <h2>Partners & Sponsors</h2>
-            <div class="accent-line"></div>
-        </div>
-        <div class="partners-grid">
-            <div class="partner-logo">Partner 1</div>
-            <div class="partner-logo">Partner 2</div>
-            <div class="partner-logo">Partner 3</div>
-            <div class="partner-logo">Partner 4</div>
-            <div class="partner-logo">Partner 5</div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>International Coal Forum</h4>
-                <p style="color: rgba(255,255,255,0.7); margin-bottom: 1rem;">Central Asia's premier coal and mining industry conference</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#agenda">Agenda</a></li>
-                    <li><a href="#speakers">Speakers</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#registration">Register</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fas fa-envelope" style="color: var(--gold); margin-right: 10px;"></i> info@coalforum.tj</li>
-                    <li><i class="fas fa-phone" style="color: var(--gold); margin-right: 10px;"></i> +992 37 221-XXXX</li>
-                    <li><i class="fas fa-globe" style="color: var(--gold); margin-right: 10px;"></i> www.coalforum.tj</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Organized By</h4>
-                <p style="color: rgba(255,255,255,0.7);">Ministry of Industry and New Technologies of the Republic of Tajikistan</p>
-            </div>
-        </div>
-    </footer>
-        <div class="footer-bottom">
-            <p>&copy; 2026 International Coal Forum Tajikistan. All rights reserved.</p>
-        </div>
-    <script scr="js/script'> </script>
+    </div>
+    <div class="footer-bottom">
+        <p data-i18n="footer_copy">© 2026 International Coal Forum Tajikistan. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 </html>
