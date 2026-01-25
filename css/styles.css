@@ -74,6 +74,21 @@
             color:var(--dark);
             border-color:transparent;
         }
+
+            .burger{
+                display:none;
+                background:transparent;
+                border:none;
+                cursor:pointer;
+                padding:0;
+                margin-left:1rem;
+                font-size:1.5rem;
+                color:var(--light);
+                transition:color .3s;
+            }
+            .burger:hover{
+                color:var(--gold);
+            }
         /* Hero */
         .hero{
             min-height:100vh;background:var(--gradient);
@@ -431,40 +446,11 @@
         @media(max-width:900px){
             .venue-content{grid-template-columns:1fr;}
         }
-/* Бургер-кнопка */
-.burger{
-    display:none;
-    flex-direction:column;
-    justify-content:space-between;
-    width:28px;
-    height:20px;
-    background:transparent;
-    border:none;
-    cursor:pointer;
-    padding:0;
-    margin-left:1rem;
-}
-.burger span{
-    display:block;
-    width:100%;
-    height:3px;
-    background:var(--light);
-    border-radius:2px;
-    transition:all .3s;
-}
-/* Анимация бургера при открытии */
-.burger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,6px);
-}
-.burger.active span:nth-child(2){
-    opacity:0;
-}
-.burger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(5px,-6px);
-}
 
-/* Мобильное меню */
 @media(max-width:768px){
+    .burger{
+        display:block;
+    }
     .nav-links{
         display:none;
         position:absolute;
@@ -495,28 +481,9 @@
     .nav-btn{
         display:none;
     }
-.burger{
-    display:none;
-    background:transparent;
-    border:none;
-    cursor:pointer;
-    padding:0;
-    margin-left:1rem;
-    font-size:1.5rem;
-    color:var(--light);
-    transition:color .3s;
-}
-.burger:hover{
-    color:var(--gold);
-}
-.burger.active i::before{
-    content:"\f00d"; /* иконка X */
-}
-
-@media(max-width:768px){
-    .burger{
-        display:block;
-    }
-    /* ...остальные стили... */
+    .hero h1{font-size:2.4rem;}
+    .form-grid{grid-template-columns:1fr;}
+    .form-group.full-width{grid-column:span 1;}
+    .pricing-card.featured{transform:none;}
 }
 
