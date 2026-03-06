@@ -132,7 +132,7 @@ updateCountdown();
 
             topics_title:"Key Discussion Topics",
             topics_text:"Comprehensive coverage of the most important trends and challenges in the coal and energy sector",
-            topic1_title:"Coal Market Outlook 2026–2030",
+            topic1_title:"Coal Market Outlook 2026–2040",
             topic1_text:"Supply, demand and price scenarios for Central Asia and key export markets",
             topic2_title:"Mining Strategy & Regulation",
             topic2_text:"Licensing, safety, and environmental requirements for new projects",
@@ -313,7 +313,7 @@ updateCountdown();
 
             topics_title:"Ключевые темы",
             topics_text:"Главные тренды и вызовы угольной и энергетической отрасли.",
-            topic1_title:"Перспективы рынка угля 2026–2030",
+            topic1_title:"Перспективы рынка угля 2026–2040",
             topic1_text:"Спрос, предложение и цены в Центральной Азии и за её пределами.",
             topic2_title:"Стратегия и регулирование",
             topic2_text:"Лицензирование, безопасность и экология для новых проектов.",
@@ -494,7 +494,7 @@ updateCountdown();
 
             topics_title:"Мавзӯъҳои асосӣ",
             topics_text:"Тамоюлҳо ва масъалаҳои муҳими соҳаи ангишт ва энергетика.",
-            topic1_title:"Назар ба бозори ангишт 2026–2030",
+            topic1_title:"Назар ба бозори ангишт 2026–2040",
             topic1_text:"Талабот, пешниҳод ва арзиш дар Осиёи Марказӣ ва бозорҳои содиротӣ.",
             topic2_title:"Стратегия ва танзимкунӣ",
             topic2_text:"Литсензия, бехатарӣ ва талаботи экологӣ барои лоиҳаҳои нав.",
