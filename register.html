@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — Международный форум угольной промышленности Таджикистана 2026</title>
+  <meta name="description" content="Register for the International Coal Industry Forum Tajikistan 2026. Free attendance.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Coal Forum Home">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="4" fill="#bf9b30" fill-opacity="0.15"/>
+          <path d="M8 28L14 12h4l6 16h-4l-1.5-4.5h-6L11 28H8zm7-8h4l-2-6.5L15 20z" fill="#bf9b30"/>
+          <path d="M26 12h4v12.5L33 28h-4l-3-3.5V12z" fill="#bf9b30" opacity="0.7"/>
+        </svg>
+        <div class="logo-text">Coal Forum <span data-i18n="hero.subtitle">Таджикистан 2026</span></div>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <ul role="list">
+          <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+          <li><a href="about.html" data-i18n="nav.about">О форуме</a></li>
+          <li><a href="program.html" data-i18n="nav.program">Программа</a></li>
+          <li><a href="speakers.html" data-i18n="nav.speakers">Спикеры</a></li>
+          <li><a href="register.html" data-i18n="nav.register">Регистрация</a></li>
+          <li><a href="media.html" data-i18n="nav.media">Медиа</a></li>
+          <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+        </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+          <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+          <button class="lang-btn" data-lang="tj" aria-label="Тоҷикӣ">TJ</button>
+        </div>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <ul role="list">
+      <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+      <li><a href="about.html" data-i18n="nav.about">О форуме</a></li>
+      <li><a href="program.html" data-i18n="nav.program">Программа</a></li>
+      <li><a href="speakers.html" data-i18n="nav.speakers">Спикеры</a></li>
+      <li><a href="register.html" data-i18n="nav.register">Регистрация</a></li>
+      <li><a href="media.html" data-i18n="nav.media">Медиа</a></li>
+      <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+    </ul>
+    <div class="mobile-lang-switcher">
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      <button class="lang-btn" data-lang="ru" aria-label="Русский">RU</button>
+      <button class="lang-btn" data-lang="tj" aria-label="Тоҷикӣ">TJ</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1 data-i18n="register.title">Регистрация</h1>
+        <p data-i18n="register.subtitle">Участие бесплатное. Зарегистрируйтесь, чтобы обеспечить своё место на форуме.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-container fade-in">
+          <p style="color: var(--color-text-muted); text-align: center; margin-bottom: var(--space-8);" data-i18n="register.note">Регистрация обязательна для всех участников. Вы получите подтверждение по электронной почте с деталями вашего бейджа.</p>
+
+          <form id="registration-form" novalidate>
+            <div class="form-grid">
+              <!-- Full Name -->
+              <div class="form-group">
+                <label for="full_name" data-i18n="form.name">Полное имя <span class="required">*</span></label>
+                <input type="text" id="full_name" name="full_name" class="form-input" required data-i18n-placeholder="form.name.placeholder" placeholder="Введите ваше полное имя">
+                <span class="form-error" data-i18n="form.required">Это поле обязательно</span>
+              </div>
+              <!-- Organization -->
+              <div class="form-group">
+                <label for="organization" data-i18n="form.org">Организация <span class="required">*</span></label>
+                <input type="text" id="organization" name="organization" class="form-input" required data-i18n-placeholder="form.org.placeholder" placeholder="Введите название организации">
+                <span class="form-error" data-i18n="form.required">Это поле обязательно</span>
+              </div>
+              <!-- Position -->
+              <div class="form-group">
+                <label for="position" data-i18n="form.position">Должность <span class="required">*</span></label>
+                <input type="text" id="position" name="position" class="form-input" required data-i18n-placeholder="form.position.placeholder" placeholder="Введите вашу должность">
+                <span class="form-error" data-i18n="form.required">Это поле обязательно</span>
+              </div>
+              <!-- Country -->
+              <div class="form-group">
+                <label for="country" data-i18n="form.country">Страна <span class="required">*</span></label>
+                <input type="text" id="country" name="country" class="form-input" required data-i18n-placeholder="form.country.placeholder" placeholder="Введите вашу страну">
+                <span class="form-error" data-i18n="form.required">Это поле обязательно</span>
+              </div>
+              <!-- City -->
+              <div class="form-group">
+                <label for="city" data-i18n="form.city">Город</label>
+                <input type="text" id="city" name="city" class="form-input" data-i18n-placeholder="form.city.placeholder" placeholder="Введите ваш город">
+              </div>
+              <!-- Email -->
+              <div class="form-group">
+                <label for="email" data-i18n="form.email">Электронная почта <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" required data-i18n-placeholder="form.email.placeholder" placeholder="Введите адрес электронной почты">
+                <span class="form-error" data-i18n="form.email.invalid">Пожалуйста, введите корректный адрес электронной почты</span>
+              </div>
+              <!-- Phone -->
+              <div class="form-group">
+                <label for="phone" data-i18n="form.phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" class="form-input" data-i18n-placeholder="form.phone.placeholder" placeholder="+992 XX XXX-XXXX">
+              </div>
+              <!-- Participation Type -->
+              <div class="form-group">
+                <label for="participation_type" data-i18n="form.type">Тип участия <span class="required">*</span></label>
+                <select id="participation_type" name="participation_type" class="form-select" required>
+                  <option value="delegate" data-i18n="form.type.delegate">Делегат</option>
+                  <option value="speaker" data-i18n="form.type.speaker">Спикер</option>
+                  <option value="media" data-i18n="form.type.media">Пресса</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-primary" data-i18n="form.submit">Зарегистрироваться</button>
+            </div>
+          </form>
+
+          <div class="form-success">
+            <div class="form-success-icon">✓</div>
+            <h3 data-i18n="form.success.title">Регистрация успешна!</h3>
+            <p data-i18n="form.success.text">Благодарим вас за регистрацию на Международный форум угольной промышленности Таджикистан 2026. Вы получите подтверждение по электронной почте в ближайшее время.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">Coal Forum <span data-i18n="hero.subtitle">Таджикистан 2026</span></div>
+          <p data-i18n="footer.desc">Первый международный форум, посвящённый угольной промышленности Таджикистана и Центральной Азии.</p>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.links">Быстрые ссылки</h4>
+          <ul role="list">
+            <li><a href="about.html" data-i18n="nav.about">О форуме</a></li>
+            <li><a href="program.html" data-i18n="nav.program">Программа</a></li>
+            <li><a href="speakers.html" data-i18n="nav.speakers">Спикеры</a></li>
+            <li><a href="register.html" data-i18n="nav.register">Регистрация</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.contact">Свяжитесь с нами</h4>
+          <ul role="list">
+            <li><a href="mailto:info@coalforum.tj">info@coalforum.tj</a></li>
+            <li><a href="tel:+99237221-0000">+992 37 221-0000</a></li>
+            <li><a href="https://t.me/CoalForumTJ" target="_blank" rel="noopener noreferrer">Telegram: @CoalForumTJ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.rights">© 2026 Международный форум угольной промышленности Таджикистан. Все права защищены.</p>
+        <p class="footer-organizer" data-i18n="footer.organizer">Организован Министерством промышленности и новых технологий Республики Таджикистан</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
