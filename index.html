@@ -19,44 +19,56 @@
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Coal Forum Home">
         <svg class="logo-icon" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <!-- Фоновой квадрат с мягкими углами -->
-  <rect width="40" height="40" rx="4" fill="#bf9b30" fill-opacity="0.12"/>
+  <!-- Фоновой квадрат -->
+  <rect width="40" height="40" rx="4" fill="#0b0d11"/>
 
-  <!-- Стилизованный глобус (полукруг + меридианы) -->
-  <path d="M9 17
-           A11 11 0 0 1 31 17
-           M14 17
-           A6 11 0 0 1 26 17
-           M20 6
-           A11 11 0 0 1 20 28"
-        stroke="#bf9b30"
-        stroke-width="1.3"
+  <!-- Стилизованный глобус (международность) -->
+  <circle cx="20" cy="15" r="9"
+          fill="none"
+          stroke="#bf9b30"
+          stroke-width="1.5"
+          opacity="0.95" />
+  <path d="M11.5 15h17
+           M14 11
+           A8 8 0 0 1 26 11
+           M14 19
+           A8 8 0 0 0 26 19"
         fill="none"
-        opacity="0.9"/>
-
-  <!-- Горизонтальная линия-основание -->
-  <line x1="8" y1="22" x2="32" y2="22"
         stroke="#bf9b30"
-        stroke-width="1.4"
-        stroke-linecap="round"
-        opacity="0.85"/>
+        stroke-width="1.2"
+        opacity="0.9" />
 
-  <!-- Абстрактная гора угля -->
-  <path d="M10 28
-           L16 20
-           L22 24
-           L27 18
-           L31 24
-           L30 28
+  <!-- Массив угля / гора внизу (угольная тема) -->
+  <path d="M8 27
+           L13 22
+           L18 24.5
+           L23 20
+           L29 25
+           L32 30
+           L8 30
            Z"
-        fill="#bf9b30"
-        fill-opacity="0.9"/>
+        fill="#1b1f26" />
+  <!-- Блики/грань угля -->
+  <path d="M13 22
+           L18 24.5
+           L21 22.5
+           L17 21
+           Z"
+        fill="#2b313b"
+        opacity="0.9" />
+  <path d="M23 20
+           L29 25
+           L27 27
+           L21.5 22.7
+           Z"
+        fill="#2b313b"
+        opacity="0.85" />
 
-  <!-- Небольшие “угольные куски” -->
-  <circle cx="14" cy="26" r="0.7" fill="#1f1300" opacity="0.65"/>
-  <circle cx="19" cy="23.5" r="0.8" fill="#1f1300" opacity="0.65"/>
-  <circle cx="25" cy="21" r="0.7" fill="#1f1300" opacity="0.55"/>
-</svg>
+  <!-- Маленькие кусочки угля -->
+  <circle cx="15" cy="27.5" r="0.8" fill="#000000" opacity="0.7"/>
+  <circle cx="21" cy="26" r="0.7" fill="#000000" opacity="0.7"/>
+  <circle cx="26" cy="27.5" r="0.7" fill="#000000" opacity="0.6"/>
+        </svg>
         <div class="logo-text">
           Coal Forum
           <span data-i18n="hero.subtitle">Таджикистан 2026</span>
