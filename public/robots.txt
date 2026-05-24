@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /uploads/registrations/
+Disallow: /includes/
+Disallow: /database/
+
+Sitemap: https://coalindustry.tj/sitemap.xml

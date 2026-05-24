@@ -1,0 +1,11 @@
+includes/config.php
+logs/
+uploads/registrations/
+uploads/news/
+uploads/years/
+uploads/speakers/
+uploads/partners/
+uploads/gallery/
+uploads/editor/
+*.log
+.DS_Store
